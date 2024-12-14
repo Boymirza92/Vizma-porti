@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const AppWrapper = styled.div`
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/87/Porto_Port_JPG.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,11 +13,9 @@ const AppWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  // flex-direction: column;
 `;
 
 const RightSection = styled.div`
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +25,6 @@ const RightSection = styled.div`
   width: 50%;
   margin-bottom: 20px;
   gap: 20px;
-
 `;
 
 const LeftSection = styled.div`
@@ -37,7 +34,6 @@ const LeftSection = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  // position: absolute;
   left: -100px;
   top: 50px;
   height: 100vh;
@@ -60,6 +56,12 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
+  &:hover {
+    background-color: #0080f9;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 `;
 
 const StyledH5 = styled.h5`
@@ -91,33 +93,41 @@ const CardBottom = styled.div`
   text-align: left;
 `;
 const Text = styled.p`
- 
   display: flex;
   flex-direction: column; /* Ustma-ust joylashish */
   gap: 5px; /* Har bir h1 orasidagi masofa */
   align-items: start;
-  color: rgba(255, 255, 255, 1.0);
+  color: rgba(255, 255, 255, 1);
   margin-top: -40px;
- 
+
   letter-spacing: 1px;
 `;
-
 
 const App = () => {
   return (
     <AppWrapper>
       <LeftSection>
         <Text>
-          <p style={{ fontWeight: "bold", fontSize: "50px" }}>Тавимиский морской <br /> порт VIZMA</p>
+          <p style={{ fontWeight: "bold", fontSize: "50px" }}>
+            Тавимиский морской <br /> порт VIZMA
+          </p>
           <br />
           <br />
           <p style={{ fontSize: "20px" }}>
-            Vel posuere nibh odio placerat massa vel tellus <br />tortor.
-            Varius eget nunc scelerisque etiam felis <br /> facilisi ante
-            viverra sem. Nunc eros elementum.
+            Vel posuere nibh odio placerat massa vel tellus <br />
+            tortor. Varius eget nunc scelerisque etiam felis <br /> facilisi
+            ante viverra sem. Nunc eros elementum.
           </p>
           <br />
-          <p style={{fontSize: "18px",  fontWeight: "bold", marginLeft: "120px"}}>О КОМПАНИИ ➡ </p>
+          <p
+            style={{
+              fontSize: "18px",
+              fontWeight: "bold",
+              marginLeft: "120px",
+            }}
+          >
+            О КОМПАНИИ ➡{" "}
+          </p>
         </Text>
       </LeftSection>
 
@@ -175,4 +185,3 @@ const App = () => {
 };
 
 export default App;
-

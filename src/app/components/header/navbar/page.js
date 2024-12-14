@@ -13,8 +13,8 @@ const HeaderWropper = styled.header`
   margin: 0;
   width: 100%;
   height: 70px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: pink;
+  box-shadow: 0 4px 8px rgba(28, 11, 11, 0.1);
 `;
 
 const NavList = styled.ul`
@@ -37,7 +37,7 @@ const NavList = styled.ul`
     right: 0;
     background-color: #fff;
     width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(28, 11, 11, 0.1);
   }
 `;
 
@@ -54,6 +54,8 @@ const NavItem = styled.li`
   &:hover {
     color: #0070f3;
     active: color: red;
+    transform: scale(1);
+    box-shadow: 10px black transparent;
 
   }
     a {

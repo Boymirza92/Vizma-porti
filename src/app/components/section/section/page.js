@@ -12,7 +12,7 @@ const AppWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   gap: 50px;
-  padding-top: 5rem;
+  // padding-top: 2rem;
 `;
 
 const CardSection = styled.div`
@@ -69,6 +69,7 @@ const Card = styled.div`
   &:hover {
     background-color: #0080f9;
     cursor: pointer;
+    transform: scale(1.1)
   }
 `;
 
@@ -102,12 +103,12 @@ const CardBottom = styled.div`
 
 const TextSection = styled.div`
   display: grid;
-
-  margin-top: 0;
+  margin-top: 80rem;
   width: 50%;
   padding: 20px;
   color: black;
   gap: 20px;
+  // position: relative;
 `;
 const Text = styled.p`
   text-decoration: underline dotted;
