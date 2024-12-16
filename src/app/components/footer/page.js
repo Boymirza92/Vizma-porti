@@ -12,21 +12,26 @@ const Footer = styled.div`
   background-color: #fff;
 `;
 
+const TopSection = styled.div`
+`;
+
 const TopFooterWrapper = styled.div`
   display: flex;
   justify-content: center;
-  // align-items: center;
   flex-wrap: wrap;
   letter-spacing: 1px;
   line-height: 2;
   padding: 0;
   width: 100%;
-  height: 200px;
+  height: auto; /* Dinamik balandlik */
   background-color: #253342;
   color: #fff;
-`;
-const TopSection = styled.div`
-  margin: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const TopSectionFooter = styled.div`
@@ -38,25 +43,52 @@ const TopSectionFooter = styled.div`
   height: 100px;
   color: azure;
   background-color: rgb(65, 32, 92);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto; /* Balanslash uchun */
+    gap: 20px;
+    padding: 10px;
+  }
 `;
 
 const Image = styled.img`
-width: 120px;
+  width: 120px;
+
+  @media (max-width: 768px) {
+    width: 80px; /* Rasmlar kichrayadi */
+  }
 `;
+
 const FooterSection = styled.div`
   flex: 1;
   line-height: 4;
   max-width: 300px;
+
+  @media (max-width: 768px) {
+    max-width: 100%; /* Har bir bo‘lim to‘liq kenglikda */
+    padding: 10px;
+  }
 `;
+
 const FooterTitle = styled.h6`
-font-size:13px;
-font-weight: bold
-margin-bottom: 10px;
-color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+
+  @media (max-width: 768px) {
+    font-size: 12px; /* Kichik ekran uchun kichikroq shrift */
+  }
 `;
+
 const FooterItem = styled.p`
   font-size: 13px;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 12px; /* Elementlarni moslashtirish */
+  }
 `;
 
 const FooterTextWrapper = styled.div`
@@ -69,28 +101,31 @@ const FooterTextWrapper = styled.div`
   letter-spacing: 1.3px;
   line-height: 1;
   padding-bottom: 15px;
+
+  @media (max-width: 768px) {
+    text-align: center; /* Matn o‘rtalash */
+    padding: 10px;
+  }
 `;
 
 const App = () => {
   return (
     <Footer>
-      <TopSection>
-        <TopSectionFooter>
-          <FontAwesomeIcon icon={faLocationDot} style={{marginRight: "-60px"}} />
-          <h4>123456, Тавима, ул. Морская, д.21</h4>
-          <Image src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png" />
-          {/* <img
-            style={{ width: "200px", padding: "100px" }}
-            src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png"
-          /> */}
-          <FontAwesomeIcon icon={faPhoneVolume} style={{marginRight: "-60px"}} />
-          <h4>+7 (123) 456-67-89</h4>
-          <FontAwesomeIcon icon={faEnvelope} style={{marginRight: "-60px"}} />
-          <h4 style={{marginRight: "10px"}}>
-            Order@vizma.ru
-          </h4>
-        </TopSectionFooter>
-      </TopSection>
+     <TopSection>
+    <TopSectionFooter>
+      <FontAwesomeIcon icon={faLocationDot} style={{marginRight: "-60px"}} />
+      <h4>123456, Тавима, ул. Морская, д.21</h4>
+      <Image src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png" />
+      <img
+        style={{ width: "200px", padding: "100px" }}
+        src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png"
+      />
+      <FontAwesomeIcon icon={faPhoneVolume} style={{marginRight: "-60px"}} />
+      <h4>+7 (123) 456-67-89</h4>
+      <FontAwesomeIcon icon={faEnvelope} style={{marginRight: "-60px"}} />
+      <h4 style={{marginRight: "10px"}}>Order@vizma.ru</h4>
+    </TopSectionFooter>
+  </TopSection>
       <TopFooterWrapper>
         <FooterSection>
           <FooterTitle>ИНФОРМАЦИЯ Щ ЮРЮЛИЦЕ</FooterTitle>

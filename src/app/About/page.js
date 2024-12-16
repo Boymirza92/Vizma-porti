@@ -10,6 +10,7 @@ const AppWrapper = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  padding-top: 5rem;
   width: 100%;
   height: 65rem;
   background-color: #e0ffff;
@@ -24,12 +25,12 @@ const SectionRight = styled.div`
   height: 100vh;
   color: black;
   padding-top: 50px;
+  padding-left: 50px;
 `;
 const SectionText = styled.h1`
   color: black;
   font-size: 40px;
   margin-left: 70px;
-
 `;
 
 const SectionInfo = styled.div`
@@ -44,8 +45,8 @@ const SectionUl = styled.ul`
   font-size: 18px;
   color: black;
   line-height: 1.5;
-  padding: 5px;
-  margin-left: 50px;
+  padding-left: 100px;
+  // paddi-left: 50px;
   line-height: 1.2;
 `;
 
@@ -80,7 +81,7 @@ const SectionLeft = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%; 
+  width: 50%;
   height: 60rem;
 `;
 
@@ -109,34 +110,44 @@ const App = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
           omnis.
         </SectionInfo>
-      
 
-        <SectionUl> 
-          <ol style={{ listStyleType: "disc"}}>
-            <li style={{marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li style={{marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
-            <li style={{marginTop: "15px"}}>
+        <SectionUl>
+          <ol style={{ listStyleType: "disc" }}>
+            <li style={{ marginTop: "15px" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li style={{ marginTop: "15px" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </li>
+            <li style={{ marginTop: "15px" }}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br />
               Consectetur, quo! Lorem ipsum dolor, sit amet consectetur
               <br />
               adipisicing elit. In quae cum ullam quos fuga harum.
             </li>
-            <li style={{marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
-            <li style={{marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            <li style={{ marginTop: "15px" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </li>
+            <li style={{ marginTop: "15px" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </li>
           </ol>
-          <SectionInfo style={{marginTop: "15px", marginLeft: "25px"}}>
-           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, consectetur! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
-            omnis.
-          </SectionInfo>
+         
           <ol style={{ listStyleType: "disc" }}>
-            <li style={{marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li style={{marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
-            <li style={{marginTop: "15px"}}>
+            <li style={{ marginTop: "15px" }}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </li>
+            <li style={{ marginTop: "15px" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </li>
+            <li style={{ marginTop: "15px" }}>
               Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
               Laborum, at. Lorem ipsum dolor, sit amet <br /> consectetur
               adipisicing elit. In quae cum ullam quos fuga harum.
             </li>
-            <li style={{marginTop: "15px"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            <li style={{ marginTop: "15px" }}>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </li>
           </ol>
         </SectionUl>
       </SectionRight>

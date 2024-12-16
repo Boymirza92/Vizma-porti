@@ -99,8 +99,13 @@ const Header = () => {
       <img
         src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png"
         alt="Visma logo"
-        style={{ height: "2rem", width: "auto", marginLeft: "10rem" }}
+        style={{
+          height: "2rem",
+          width: "auto",
+          marginLeft: "10rem",
+        }}
       />
+
       <nav>
         <NavList $show={showMenu}>
           <NavItem>

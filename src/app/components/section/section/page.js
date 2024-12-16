@@ -12,7 +12,11 @@ const AppWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   gap: 50px;
-  // padding-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 
 const CardSection = styled.div`
@@ -28,6 +32,13 @@ const CardSection = styled.div`
   width: 45%;
   margin-bottom: 20px;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    position: relative;
+    right: 0;
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Section = styled.div`
@@ -42,11 +53,25 @@ const Section = styled.div`
   bottom: 10px;
   height: 100vh;
   width: 50%;
+
+  @media (max-width: 768px) {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
 `;
 
 const Row = styled.div`
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
 `;
 
 const Title = styled.h1`
@@ -69,7 +94,13 @@ const Card = styled.div`
   &:hover {
     background-color: #0080f9;
     cursor: pointer;
-    transform: scale(1.1)
+    transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
   }
 `;
 
@@ -103,18 +134,28 @@ const CardBottom = styled.div`
 
 const TextSection = styled.div`
   display: grid;
-  margin-top: 80rem;
+  margin-top: 100rem;
   width: 50%;
   padding: 20px;
   color: black;
   gap: 20px;
-  // position: relative;
+
+  @media (max-width: 768px) {
+    margin-top: 30rem;
+    width: 100%;
+    padding: 25px;
+  }
 `;
+
 const Text = styled.p`
   text-decoration: underline dotted;
   text-underline-offset: 4px;
   line-height: 1.5;
   color: #800080;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 `;
 
 const TextOne = styled.h3`
@@ -122,10 +163,18 @@ const TextOne = styled.h3`
   gap: 5px;
   line-height: 5;
   color: #800080;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const ContentImg = styled.img`
   width: 100px;
+
+  @media (max-width: 768px) {
+    width: 80px;
+  }
 `;
 
 const TextTwo = styled.div`
@@ -133,6 +182,11 @@ const TextTwo = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const App = () => {
@@ -158,7 +212,7 @@ const App = () => {
           </TextTwo>
           <TextTwo>
             <Text>
-              Договор перевалки <br /> (типовая форма)
+              Договор перевалки <br /> типовая форма
             </Text>
             <ContentImg src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrZDS7ALl99-0Iu4JEIQGNZVZcL3njIKgdUQ&s" />
           </TextTwo>
