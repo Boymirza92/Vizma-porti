@@ -3,18 +3,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-
-
 const HeaderWropper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
-   padding: 20px 3rem;
+  padding: 5px;
   z-index: 1000;
   width: 100%;
   height: 70px;
-  background-color:#34495e ;
+  background-color: #34495e;
   box-shadow: 0 10px 10px rgba(24, 7, 7, 0.1);
 
   @media (max-width: 768px) {
@@ -23,14 +21,14 @@ const HeaderWropper = styled.div`
 `;
 
 const Images = styled.img`
-height: 2rem; 
-// width: auto;
-marginLeft: 10rem; 
+  height: 2rem;
+  width: auto;
+  margin-left: 10rem;
 
-@media (max-width: 768px) {
-height: 1rem;
-}
-`
+  @media (max-width: 768px) {
+    height: 1rem;
+  }
+`;
 
 const NavList = styled.ul`
   display: flex;
@@ -55,6 +53,8 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
+  width: 4rem;
+  text-align: center;
   margin: 0 1rem;
   padding: 0.5rem;
   font-size: 1rem;
@@ -62,7 +62,10 @@ const NavItem = styled.li`
   color: #c39bd3;
 
   &:hover {
-    color:rgb(92, 112, 135);
+    color: rgb(92, 112, 135);
+    border-radius: 5px;
+    border: 0.5px solid #c39bd3;
+    box-shadow: 2px 2px 1px #c39bd3;
   }
 
   a {
@@ -93,6 +96,7 @@ const SearchInput = styled.input`
 const LanguageSelect = styled.select`
   padding: 0.5rem;
   margin-left: 4rem;
+  margin-right: 4rem;
   font-size: 0.9rem; /* Font hajmini kichikroq qildik */
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -103,7 +107,6 @@ const LanguageSelect = styled.select`
     font-size: 0.9rem; /* Til opsiyalari ham kichikroq ko'rinadi */
   }
 `;
-
 
 const MenuToggle = styled.button`
   display: none; /* Katta ekranlarda tugma ko'rinmaydi */
@@ -126,9 +129,7 @@ const Header = () => {
         src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png"
         alt="Visma logo"
       />
-      <MenuToggle onClick={() => setShowMenu(!showMenu)}>
-        ☰
-      </MenuToggle>
+      <MenuToggle onClick={() => setShowMenu(!showMenu)}>☰</MenuToggle>
       <nav>
         <NavList $show={showMenu}>
           <NavItem>

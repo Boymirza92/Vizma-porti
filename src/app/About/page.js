@@ -4,7 +4,7 @@ import styled from "styled-components";
 import VideoFile from "./video/port.mp4"; // Video faylni to‘g‘ri import qilish
 import Info from "./Info/page";
 import Footer from "../components/footer/page";
-import Navbar from "../components/header/page"
+import Navbar from "../components/header/navbar/page";
 
 const AppWrapper = styled.div`
   display: flex;

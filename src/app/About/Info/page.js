@@ -166,6 +166,7 @@ const AppWrapper = styled.div`
   width: 100%;
   max-width: 1450px;
   padding-left: 45px;
+  padding-bottom: 70px;
   margin: 0 auto; /* Kontentni markazlash uchun */
 `;
 

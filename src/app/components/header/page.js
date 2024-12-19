@@ -3,18 +3,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
-
-
 const HeaderWropper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
-   padding: 20px 3rem;
+  // padding: 20px 3rem;
   z-index: 1000;
   width: 100%;
   height: 70px;
-  background-color:#34495e ;
+  background-color: #34495e;
   box-shadow: 0 10px 10px rgba(24, 7, 7, 0.1);
 
   @media (max-width: 768px) {
@@ -23,14 +21,14 @@ const HeaderWropper = styled.div`
 `;
 
 const Images = styled.img`
-height: 2rem; 
-width: auto;
-marginLeft: 10rem; 
+  height: 2rem;
+  width: auto;
+  marginleft: 10rem;
 
-@media (max-width: 768px) {
-height: 1rem;
-}
-`
+  @media (max-width: 768px) {
+    height: 1rem;
+  }
+`;
 
 const NavList = styled.ul`
   display: flex;
@@ -62,7 +60,7 @@ const NavItem = styled.li`
   color: #c39bd3;
 
   &:hover {
-    color:rgb(92, 112, 135);
+    color: rgb(92, 112, 135);
   }
 
   a {
@@ -104,7 +102,6 @@ const LanguageSelect = styled.select`
   }
 `;
 
-
 const MenuToggle = styled.button`
   display: none; /* Katta ekranlarda tugma ko'rinmaydi */
   background: none;
@@ -127,9 +124,7 @@ const Header = () => {
         alt="Visma logo"
         // style={{ height: "2rem", width: "auto", marginLeft: "10rem" }}
       />
-      <MenuToggle onClick={() => setShowMenu(!showMenu)}>
-        ☰
-      </MenuToggle>
+      <MenuToggle onClick={() => setShowMenu(!showMenu)}>☰</MenuToggle>
       <nav>
         <NavList $show={showMenu}>
           <NavItem>
