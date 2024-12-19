@@ -47,10 +47,10 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  // padding: 20px;
   position: absolute;
   left: -100px;
-  bottom: 10px;
+  bottom: 150px;
   height: 100vh;
   width: 50%;
 
@@ -72,11 +72,6 @@ const Row = styled.div`
   @media (max-width: 768px) {
     gap: 15px;
   }
-`;
-
-const Title = styled.h1`
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 `;
 
 const Card = styled.div`

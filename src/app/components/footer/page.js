@@ -10,6 +10,8 @@ import {
 
 const Footer = styled.div`
   background-color: #fff;
+  width: 100%;
+
 `;
 
 const TopSection = styled.div`
@@ -27,11 +29,11 @@ const TopFooterWrapper = styled.div`
   background-color: #253342;
   color: #fff;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  //   align-items: center;
+  //   text-align: center;
+  // }
 `;
 
 const TopSectionFooter = styled.div`
@@ -44,20 +46,20 @@ const TopSectionFooter = styled.div`
   color: azure;
   background-color: rgb(65, 32, 92);
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    height: auto; /* Balanslash uchun */
-    gap: 20px;
-    padding: 10px;
-  }
+  // @media (max-width: 768px) {
+  //   flex-direction: column;
+  //   height: auto; /* Balanslash uchun */
+  //   gap: 20px;
+  //   padding: 10px;
+  // }
 `;
 
 const Image = styled.img`
   width: 120px;
 
-  @media (max-width: 768px) {
-    width: 80px; /* Rasmlar kichrayadi */
-  }
+  // @media (max-width: 768px) {
+  //   width: 80px; /* Rasmlar kichrayadi */
+  // }
 `;
 
 const FooterSection = styled.div`
@@ -65,10 +67,10 @@ const FooterSection = styled.div`
   line-height: 4;
   max-width: 300px;
 
-  @media (max-width: 768px) {
-    max-width: 100%; /* Har bir bo‘lim to‘liq kenglikda */
-    padding: 10px;
-  }
+  // @media (max-width: 768px) {
+  //   max-width: 100%; /* Har bir bo‘lim to‘liq kenglikda */
+  //   padding: 10px;
+  // }
 `;
 
 const FooterTitle = styled.h6`
@@ -77,18 +79,18 @@ const FooterTitle = styled.h6`
   margin-bottom: 10px;
   color: #fff;
 
-  @media (max-width: 768px) {
-    font-size: 12px; /* Kichik ekran uchun kichikroq shrift */
-  }
+  // @media (max-width: 768px) {
+  //   font-size: 12px; /* Kichik ekran uchun kichikroq shrift */
+  // }
 `;
 
 const FooterItem = styled.p`
   font-size: 13px;
   line-height: 1.5;
 
-  @media (max-width: 768px) {
-    font-size: 12px; /* Elementlarni moslashtirish */
-  }
+  // @media (max-width: 768px) {
+  //   font-size: 12px; /* Elementlarni moslashtirish */
+  // }
 `;
 
 const FooterTextWrapper = styled.div`
@@ -102,10 +104,10 @@ const FooterTextWrapper = styled.div`
   line-height: 1;
   padding-bottom: 15px;
 
-  @media (max-width: 768px) {
-    text-align: center; /* Matn o‘rtalash */
-    padding: 10px;
-  }
+  // @media (max-width: 768px) {
+  //   text-align: center; /* Matn o‘rtalash */
+  //   padding: 10px;
+  // }
 `;
 
 const App = () => {

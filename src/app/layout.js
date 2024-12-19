@@ -1,4 +1,4 @@
-import "./globals.css";
+// import "./globals.css";
 import Header from "./components/header/navbar/page"; // Client component
 import Footer from "./components/footer/page"; // Client component
 
@@ -11,9 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+        style={{ display: "flex", flexDirection: "column", minHeight: "100vh", margin: "0", padding: "0", width: "100%"}}
       >
-        <Header />
+        {/* <Header /> */}
         <main
           style={{
             display: "flex",
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         >
           {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

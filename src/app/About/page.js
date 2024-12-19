@@ -3,6 +3,8 @@ import React from "react";
 import styled from "styled-components";
 import VideoFile from "./video/port.mp4"; // Video faylni to‘g‘ri import qilish
 import Info from "./Info/page";
+import Footer from "../components/footer/page";
+import Navbar from "../components/header/page"
 
 const AppWrapper = styled.div`
   display: flex;
@@ -10,7 +12,6 @@ const AppWrapper = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-top: 5rem;
   width: 100%;
   height: 65rem;
   background-color: #e0ffff;
@@ -24,7 +25,7 @@ const SectionRight = styled.div`
   width: 50%;
   height: 100vh;
   color: black;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-left: 50px;
 `;
 const SectionText = styled.h1`
@@ -46,7 +47,7 @@ const SectionUl = styled.ul`
   color: black;
   line-height: 1.5;
   padding-left: 100px;
-  // paddi-left: 50px;
+  paddi-left: 50px;
   line-height: 1.2;
 `;
 
@@ -55,7 +56,7 @@ const Card = styled.div`
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  width: 35rem;
+  // width: 35rem;
   height: 13rem;
   border-radius: 20px;
   margin-top: 3rem;
@@ -95,7 +96,7 @@ const VideoWrapper = styled.video`
 const App = () => {
   return (
     <AppWrapper>
-      {/* O'ng qism */}
+      <Navbar/>
       <SectionRight>
         <SectionText>О компании</SectionText>
         <SectionInfo>
@@ -165,6 +166,7 @@ const App = () => {
         </Card>
       </SectionLeft>
       <Info />
+      <Footer/>
     </AppWrapper>
   );
 };

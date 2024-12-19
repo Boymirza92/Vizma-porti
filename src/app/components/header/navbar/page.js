@@ -10,8 +10,8 @@ const HeaderWropper = styled.div`
   align-items: center;
   justify-content: space-between;
   position: fixed;
+   padding: 20px 3rem;
   z-index: 1000;
-  padding: 20px 3rem;
   width: 100%;
   height: 70px;
   background-color:#34495e ;
@@ -21,6 +21,16 @@ const HeaderWropper = styled.div`
     padding: 10px 1rem; /* Kichik ekranlarda padding kamaytiriladi */
   }
 `;
+
+const Images = styled.img`
+height: 2rem; 
+// width: auto;
+marginLeft: 10rem; 
+
+@media (max-width: 768px) {
+height: 1rem;
+}
+`
 
 const NavList = styled.ul`
   display: flex;
@@ -112,10 +122,9 @@ const Header = () => {
 
   return (
     <HeaderWropper>
-      <img
+      <Images
         src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png"
         alt="Visma logo"
-        style={{ height: "2rem", width: "auto", marginLeft: "10rem" }}
       />
       <MenuToggle onClick={() => setShowMenu(!showMenu)}>
         ☰
