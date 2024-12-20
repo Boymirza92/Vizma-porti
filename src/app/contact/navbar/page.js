@@ -3,10 +3,16 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "../../components/footer/page";
 import Header from "../../components/header/navbar/page";
+
+// App wrapper qismi
 const AppWrapper = styled.div`
   margin: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
 `;
 
+// Navbar qismi
 const Navbar = styled.div`
   display: flex;
   justify-content: space-around; /* Navbar elementlarini teng bo'lib joylashtirish */
@@ -23,7 +29,7 @@ const NavbarUl = styled.ul`
   list-style: none;
   display: flex;
   margin: 0;
-  padding-right: 15rem;
+  padding-right: 20rem;
 `;
 
 const NavbarLi = styled.li`
@@ -31,10 +37,11 @@ const NavbarLi = styled.li`
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: color 0.1s ease;
   text-align: center;
   font-family: sans-serif;
   letter-spacing: 1px;
+  font-size: 11px;
 
   &:hover {
     display: inline-block;
@@ -48,7 +55,10 @@ const SectionInfo = styled.div`
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  margin-left: 17rem
+  margin-left: 17rem;
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
 `;
 
 // text H1
@@ -58,17 +68,30 @@ const TextH1 = styled.h1`
   font-style: normal;
   font-weight: 400;
   font-family: sans-serif;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.4px;
 `;
 
 // Title Ul
-const TitleUl = styled.ul``;
+const TitleUl = styled.ul`
+  letter-spacing: 0.4px;
+  padding-bottom: 4rem;
+  font-size: 20px;
+`;
 
 // Text Ol
-const TextOl = styled.div``;
+const TextOl = styled.div`
+padding: 0;
+line-height: 2rem;
+
+`;
 
 // Title Li
-const TitleLi = styled.li``;
+const TitleLi = styled.li`
+margin-left: 15px;
+margin-top: 15px;
+
+`;
+
 
 const ContactWrapper = () => {
   return (
@@ -78,7 +101,7 @@ const ContactWrapper = () => {
         <NavbarUl>
           <NavbarLi>ГЛАВНАЯ ➡</NavbarLi>
           <NavbarLi>КЛИЕНТАМ ➡</NavbarLi>
-          <NavbarLi style={{ width: "40rem" }}>
+          <NavbarLi style={{ width: "30rem" }}>
             ЗАЯВКА И ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ЗАКЛЮЧЕНИЯ ДОГОВОРОМ ➡
           </NavbarLi>
         </NavbarUl>
@@ -88,17 +111,84 @@ const ContactWrapper = () => {
           ЗАЯВКА И ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ЗАКЛЮЧЕНИЯ <br /> ДОГОВОРОМ
         </TextH1>
         <TitleUl>
-          <TextOl>
+          <TextOl style={{lineHeight: "2rem"}}>
             Для рассмотрения возможности заключени договора контрогент
             долженпредоставить следующие документы:
           </TextOl>
           <TitleLi>
-            заявку (оферту) на имя генерраьного директора VIZMA Technology,
+            Заявку (оферту) на имя генерраьного директора VIZMA Technology,
             котороя подоется на фирменном бланке <br /> организация и должая
             содержать сведения о виде робот и услуг, на которие
             предлагаетзаключит договор, <br /> номенклатуре груза и обшеме на
-            год разбивкойпо месяцамю
+            год разбивкойпо месяцам
           </TitleLi>
+          <TextOl>
+            Для резидентов РФ (документы должны быт заверины подписю
+            руководителя и печатю организатции):
+          </TextOl>
+          <TitleLi>копии учредительных документов (устава, положения)</TitleLi>
+          <TitleLi>
+            копию выписки из ЕГРЮЛ (выданной не позднее одного месяца до даты
+            заключения договора)
+          </TitleLi>
+          <TitleLi>
+            копию протокола или выписки из протокола о назначении
+            исполнительного органа
+          </TitleLi>
+          <TitleLi>копию свидетельства о государственной регистрации</TitleLi>
+          <TitleLi>
+            копию приказа о назначении лица, действующего на основании положения
+          </TitleLi>
+          <TitleLi>копию доверенности представителя</TitleLi>
+          <TitleLi>
+            копию свидетельства о постановке на учет в качестве
+            налогоплательщика
+          </TitleLi>
+          <TitleLi>
+            заполненную карточку контрагента, заверенную подписью и печатью
+            руководителя организации и главн и содержащую следующую информацию:
+          </TitleLi>
+          <TextOl>1. Юридический адрес контрагента</TextOl>
+          <TextOl>2. Фактический адрес контрагента</TextOl>
+          <TextOl>3. Банковские реквизиты контрагента</TextOl>
+          <TextOl>
+            4. Контактная информация номер факса, Адрес электронной почты и
+            контактные пний с указанием номером телефонов
+          </TextOl>
+          <TextOl>
+            Для резидентов РФ (документы должны быт заверины подписю
+            руководителя и печатю организатции):
+          </TextOl>
+          <TitleLi>копии учредительных документов (устава, положения)</TitleLi>
+          <TitleLi>
+            копию выписки из ЕГРЮЛ (выданной не позднее одного месяца до даты
+            заключения договора)
+          </TitleLi>
+          <TitleLi>
+            копию протокола или выписки из протокола о назначении
+            исполнительного органа
+          </TitleLi>
+          <TitleLi>копию свидетельства о государственной регистрации</TitleLi>
+          <TitleLi>
+            копию приказа о назначении лица, действующего на основании положения
+          </TitleLi>
+          <TitleLi>копию доверенности представителя</TitleLi>
+          <TitleLi>
+            копию свидетельства о постановке на учет в качестве
+            налогоплательщика
+          </TitleLi>
+          <TitleLi>
+            заполненную карточку контрагента, заверенную подписью и печатью
+            руководителя организации и главн и содержащую следующую информацию:
+          </TitleLi>
+          <TextOl>1. Юридический адрес контрагента</TextOl>
+          <TextOl>2. Фактический адрес контрагента</TextOl>
+          <TextOl>3. Банковские реквизиты контрагента</TextOl>
+          <TextOl>
+            4. Контактная информация номер факса, Адрес электронной почты и
+            контактные пний с указанием номером телефонов
+          </TextOl>
+         
         </TitleUl>
       </SectionInfo>
       <Footer />
@@ -107,3 +197,31 @@ const ContactWrapper = () => {
 };
 
 export default ContactWrapper;
+
+// • копию выписки из ЕГРЮЛ (выданной не позднее одного месяца до даты заключения договора);
+
+// • копии учредительных документов (устава, положения);
+
+// • копию протокола или выписки из протокола о назначении исполнительного органа;
+
+// • копию свидетельства о государственной регистрации;
+
+// • копию приказа о назначении лица, действующего на основании положения;
+
+// • копию доверенности представителя;
+
+// • копию свидетельства о постановке на учет в качестве налогоплательщика;
+
+// • заполненную карточку контрагента, заверенную подписью и печатью руководителя организации и главн и содержащую следующую информацию:
+
+// 1. Юридический адрес контрагента;
+
+// 2. Фактический адрес контрагента;
+
+// 3. Банковские реквизиты контрагента
+// 1. Юридический адрес контрагента
+
+// 2. Фактический адрес контрагента,
+
+// 3. Банковские реквизиты контрагента
+// 4. Контактная информация номер факса, Адрес электронной почты и контактные пний с указанием номером телефонов

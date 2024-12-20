@@ -53,7 +53,7 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-  width: 4rem;
+  width: 5rem;
   text-align: center;
   margin: 0 1rem;
   padding: 0.5rem;
@@ -85,6 +85,13 @@ const SearchInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   width: 150px;
+  
+  &:hover {
+    color: #d5d8dc;
+    border-radius: 5px;
+    border: 0.5px solid #c39bd3;
+    box-shadow: 2px 2px 1px #c39bd3;
+  }
 
   @media (max-width: 768px) {
     margin-left: 0;
@@ -100,9 +107,16 @@ const LanguageSelect = styled.select`
   font-size: 0.9rem; /* Font hajmini kichikroq qildik */
   border: 1px solid #ccc;
   border-radius: 4px;
-  background-color: pink;
+  background-color: #566573;
+  cursor: pointer;
   box-shadow: 0 4px 8px rgba(28, 11, 11, 0.1);
 
+  &:hover {
+    color: #d5d8dc;
+    border-radius: 5px;
+    border: 0.5px solid #c39bd3;
+    box-shadow: 2px 2px 1px #c39bd3;
+  }
   option {
     font-size: 0.9rem; /* Til opsiyalari ham kichikroq ko'rinadi */
   }

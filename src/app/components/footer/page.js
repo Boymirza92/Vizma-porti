@@ -117,7 +117,6 @@ const App = () => {
     <TopSectionFooter>
       <FontAwesomeIcon icon={faLocationDot} style={{marginRight: "-60px"}} />
       <h4>123456, Тавима, ул. Морская, д.21</h4>
-      <Image src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png" />
       <img
         style={{ width: "200px", padding: "100px" }}
         src="https://www.mavenfirst.com/hubfs/Kuvat_sivuille/Asiakkaat/Visma/Digital_Visma_logo%20copy.png"
