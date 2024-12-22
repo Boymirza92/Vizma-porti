@@ -7,9 +7,14 @@ import Header from "../../components/header/navbar/page";
 // App wrapper qismi
 const AppWrapper = styled.div`
   margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem; /* Mobil uchun ichki bo'shliq qo'shish */
+  }
 `;
 
 // Navbar qismi
@@ -18,11 +23,19 @@ const Navbar = styled.div`
   justify-content: space-around; /* Navbar elementlarini teng bo'lib joylashtirish */
   align-items: center; /* Yassi joylashtirish */
   width: 100%;
-  height: 60px;
+  height: 3.8rem;
   background-color: rgb(200, 210, 221);
-  margin-top: 100px;
   padding-right: 10rem;
-  margin-top: 5rem;
+  margin-top: 4.4rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-right: 0;
+    padding: 0;
+    height: 10rem;
+    width: 100%;
+    margin-top: 2rem;
+  }
 `;
 
 const NavbarUl = styled.ul`
@@ -30,6 +43,12 @@ const NavbarUl = styled.ul`
   display: flex;
   margin: 0;
   padding-right: 20rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Ro'yxatni ustun formatga o'tkazish */
+    padding: 3.5rem;
+    align-items: center;
+  }
 `;
 
 const NavbarLi = styled.li`
@@ -48,7 +67,12 @@ const NavbarLi = styled.li`
     color: #9b59b6;
     transition: color 0.3s, border-color 1s, text-shadow 0.3s;
   }
+
+  @media (max-width: 768px) {
+    margin: 10px 0; /* Mobil qurilmalar uchun bo'shliqni moslashtirish */
+  }
 `;
+
 // Section Info
 const SectionInfo = styled.div`
   display: flex;
@@ -59,9 +83,49 @@ const SectionInfo = styled.div`
   width: 100%;
   height: 100%;
   padding-top: 4rem;
+
+  @media (max-width: 768px) {
+    margin-left: 2rem; /* Kichik ekranlar uchun joylashuvni moslashtirish */
+    padding-top: 2rem;
+  }
 `;
 
-// text H1
+
+// Text Ul
+const TitleUl = styled.ul`
+  letter-spacing: 0.4px;
+  padding-bottom: 4rem;
+  font-size: 20px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 2rem; /* Bo'shliqni kamaytirish */
+    font-size: 16px;
+  }
+`;
+
+
+// Text Ol
+const TextOl = styled.div`
+  padding: 0;
+  line-height: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 14px; /* Matn o'lchamini kichraytirish */
+    line-height: 1.5rem;
+  }
+`;
+
+// Title Li
+const TitleLi = styled.li`
+  margin-left: 15px;
+  margin-top: 15px;
+
+  @media (max-width: 768px) {
+    margin-left: 5px; /* Kichik ekranlar uchun bo'shliqni moslashtirish */
+    font-size: 14px;
+  }
+`;
+
 const TextH1 = styled.h1`
   text-align: center;
   line-height: 3rem;
@@ -69,29 +133,14 @@ const TextH1 = styled.h1`
   font-weight: 400;
   font-family: sans-serif;
   letter-spacing: 0.4px;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 20px; /* Mobil qurilmalar uchun sarlavhani kichraytirish */
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
 `;
-
-// Title Ul
-const TitleUl = styled.ul`
-  letter-spacing: 0.4px;
-  padding-bottom: 4rem;
-  font-size: 20px;
-`;
-
-// Text Ol
-const TextOl = styled.div`
-padding: 0;
-line-height: 2rem;
-
-`;
-
-// Title Li
-const TitleLi = styled.li`
-margin-left: 15px;
-margin-top: 15px;
-
-`;
-
 
 const ContactWrapper = () => {
   return (

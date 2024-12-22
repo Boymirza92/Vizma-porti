@@ -87,7 +87,7 @@ const SearchInput = styled.input`
   width: 150px;
   
   &:hover {
-    color: #d5d8dc;
+    color:rgb(68, 73, 82);
     border-radius: 5px;
     border: 0.5px solid #c39bd3;
     box-shadow: 2px 2px 1px #c39bd3;
@@ -150,15 +150,15 @@ const Header = () => {
             <Link href="/">Home</Link>
           </NavItem>
           <NavItem>
-            <Link href="contact/navbar">Contract</Link>
+            <Link href="/contact/navbar">Contract</Link>
           </NavItem>
           <NavItem>
-            <Link href="About">About</Link>
+            <Link href="/About">About</Link>
           </NavItem>
-          <NavItem>
-            <Link href="/">Info</Link>
+          <NavItem style={{width: "6rem"}}>
+            <Link href="/orderform">Order form</Link>
           </NavItem>
-          <NavItem>Новости</NavItem>
+          
           <SearchInput type="text" placeholder="Search ..." />
           <LanguageSelect>
             <option value="uz">Uz</option>
