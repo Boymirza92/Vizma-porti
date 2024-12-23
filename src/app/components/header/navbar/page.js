@@ -16,7 +16,7 @@ const HeaderWropper = styled.div`
   box-shadow: 0 10px 10px rgba(24, 7, 7, 0.1);
 
   @media (max-width: 768px) {
-    padding: 10px 1rem; /* Kichik ekranlarda padding kamaytiriladi */
+    padding: 10px 1rem; 
   }
 `;
 
@@ -45,9 +45,12 @@ const NavList = styled.ul`
     position: absolute;
     top: 4rem;
     right: 0;
-    background-color: #fff;
-    width: 200px;
+    background-color: #256364;
+    color: black;
+    width: 11rem;
     padding: 1rem;
+    margin-right: 0.1rem;
+    border-radius: 0.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: ${(props) => (props.$show ? "flex" : "none")};
   }
@@ -67,11 +70,14 @@ const NavItem = styled.li`
     border-radius: 5px;
     border: 0.5px solid #c39bd3;
     box-shadow: 2px 2px 1px #c39bd3;
+
   }
 
   a {
     text-decoration: none;
     color: inherit;
+    font-size: 0.7rem;
+    padding: 1rem;
   }
 
   @media (max-width: 768px) {
@@ -92,13 +98,15 @@ const SearchInput = styled.input`
     border-radius: 5px;
     border: 0.5px solid #c39bd3;
     box-shadow: 2px 2px 1px #c39bd3;
+
   }
 
   @media (max-width: 768px) {
     margin-left: 0;
     margin-bottom: 1rem;
-    width: 90%; /* Kichik ekranlarda kenglikni moslashtirish */
-  }
+    width: 50%; /* Kichik ekranlarda kenglikni moslashtirish */
+    height: 1.5rem;  
+    }
 `;
 
 const LanguageSelect = styled.select`
@@ -121,6 +129,11 @@ const LanguageSelect = styled.select`
   option {
     font-size: 0.9rem; /* Til opsiyalari ham kichikroq ko'rinadi */
   }
+
+  @media only screen and (max-width: 768px) {
+  background-color: inherit;
+  color: inherit;
+  }
 `;
 
 const MenuToggle = styled.button`
@@ -132,6 +145,7 @@ const MenuToggle = styled.button`
 
   @media (max-width: 768px) {
     display: block; /* Kichik ekranlarda tugma ko'rinadi */
+    width: 3rem;
   }
 `;
 
@@ -156,7 +170,7 @@ const Header = () => {
           <NavItem>
             <Link href="/About">About</Link>
           </NavItem>
-          <NavItem style={{width: "6rem"}}>
+          <NavItem style={{width: "7rem"}}>
             <Link href="/orderform">Order form</Link>
           </NavItem>
           

@@ -6,13 +6,12 @@ import Header from "../../components/header/navbar/page";
 
 // App wrapper qismi
 const AppWrapper = styled.div`
-  margin: 0;
-  padding: 0;
   width: 100%;
   height: 100%;
   flex-direction: column;
 
   @media (max-width: 768px) {
+  width: 100%;
   }
 `;
 
@@ -29,11 +28,10 @@ const Navbar = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding-right: 0;
-    padding: 0;
     height: 10rem;
     width: 100%;
     margin-top: 2rem;
+    padding-left: 10rem;
   }
 `;
 
@@ -44,10 +42,11 @@ const NavbarUl = styled.ul`
   padding-right: 20rem;
 
   @media (max-width: 768px) {
+    display: flex;
     flex-direction: column; /* Ro'yxatni ustun formatga o'tkazish */
     padding: 3.5rem;
     align-items: center;
-  }
+    justify-content: center;
 `;
 
 const NavbarLi = styled.li`
@@ -85,11 +84,11 @@ const SectionInfo = styled.div`
   padding-top: 4rem;
 
   @media (max-width: 768px) {
-    margin-left: 2rem; /* Kichik ekranlar uchun joylashuvni moslashtirish */
+  margin-left: 0;
     padding-top: 2rem;
+    width: 100%;
   }
 `;
-
 
 // Text Ul
 const TitleUl = styled.ul`
@@ -98,11 +97,10 @@ const TitleUl = styled.ul`
   font-size: 20px;
 
   @media (max-width: 768px) {
-    padding-bottom: 2rem; /* Bo'shliqni kamaytirish */
+    padding: 0 1.5rem 3rem;
     font-size: 16px;
   }
 `;
-
 
 // Text Ol
 const TextOl = styled.div`
@@ -111,7 +109,7 @@ const TextOl = styled.div`
 
   @media (max-width: 768px) {
     font-size: 14px; /* Matn o'lchamini kichraytirish */
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
 `;
 
@@ -136,9 +134,10 @@ const TextH1 = styled.h1`
   margin-bottom: 2rem;
 
   @media (max-width: 768px) {
+    width: 100%;
     font-size: 20px; /* Mobil qurilmalar uchun sarlavhani kichraytirish */
-    line-height: 2rem;
-    margin-bottom: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -151,7 +150,7 @@ const ContactWrapper = () => {
           <NavbarLi>ГЛАВНАЯ ➡</NavbarLi>
           <NavbarLi>КЛИЕНТАМ ➡</NavbarLi>
           <NavbarLi style={{ width: "15rem" }}>
-          ДОКУМЕНТЫ ДЛЯ ДОГОВОРА ➡
+            ДОКУМЕНТЫ ДЛЯ ДОГОВОРА ➡
           </NavbarLi>
         </NavbarUl>
       </Navbar>
@@ -160,7 +159,7 @@ const ContactWrapper = () => {
           ЗАЯВКА И ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ЗАКЛЮЧЕНИЯ <br /> ДОГОВОРОМ
         </TextH1>
         <TitleUl>
-          <TextOl style={{lineHeight: "2rem"}}>
+          <TextOl style={{ lineHeight: "2rem" }}>
             Для рассмотрения возможности заключени договора контрогент
             долженпредоставить следующие документы:
           </TextOl>
@@ -237,7 +236,6 @@ const ContactWrapper = () => {
             4. Контактная информация номер факса, Адрес электронной почты и
             контактные пний с указанием номером телефонов
           </TextOl>
-         
         </TitleUl>
       </SectionInfo>
       <Footer />
