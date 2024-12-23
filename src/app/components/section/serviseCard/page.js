@@ -14,10 +14,11 @@ const AppWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* Elementlarni o'rnatishda qoplash uchun flex-wrap qo'shildi */
-  
+
   @media (max-width: 768px) {
     flex-direction: column;
-     padding-top: 10rem;
+    padding-top: 8rem;
+    height: 100%;
   }
 `;
 
@@ -31,8 +32,12 @@ const RightSection = styled.div`
   margin-bottom: 20px;
 
   @media (max-width: 768px) {
-    width: 100%;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 80%;
+
   }
 `;
 
@@ -46,7 +51,8 @@ const LeftSection = styled.div`
   width: 50%;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 95%;
+    height: 100%;
     padding: 10px;
   }
 `;
@@ -73,46 +79,44 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px; /* bo'shliq qo'shildi */
-  
-  &:hover {
-    background-color: #0080f9;
-    cursor: pointer;
-    transform: scale(1.1);
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 150px;
-  }
+  margin-bottom: 15px;
+  overflow: hidden; /* Matn tashqariga chiqmasligi uchun */
+  text-overflow: ellipsis; /* Matnni qisqartirish */
+  white-space: nowrap; /* Matnni bitta qatorda ushlab turish */
 `;
 
 const StyledH5 = styled.h5`
-  display: inline-block;
-  display: flex;
   margin: 0;
   padding: 0;
   font-size: 16px;
   color: #ffffff;
-  line-height: 1;
-  align-items: start;
+  text-align: start; /* Matnni markazlash */
+  overflow: hidden; /* Matn hajmini cheklash */
+  text-overflow: ellipsis; /* Uzun matnlarni qisqartirish */
+  white-space: nowrap; /* Bitta qatorda saqlash */
 
   & span {
-    display: inline-block;
     font-weight: bold;
     line-height: 1;
-    margin-top: 5px;
-    padding: 0;
   }
 `;
-
 const CardTop = styled.div`
   align-self: flex-start;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+  }
 `;
 
 const CardBottom = styled.div`
   align-self: flex-start;
   text-align: left;
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+  }
 `;
 
 const Text = styled.div`
@@ -133,6 +137,7 @@ const Title = styled.p`
 
   @media (max-width: 768px) {
     font-size: 35px;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -162,7 +167,9 @@ const App = () => {
     <AppWrapper>
       <LeftSection>
         <Text>
-          <Title>Тавимиский морской <br /> порт VIZMA</Title>
+          <Title>
+            Тавимиский морской <br /> порт VIZMA
+          </Title>
           <Paragraph>
             Vel posuere nibh odio placerat massa vel tellus <br />
             tortor. Varius eget nunc scelerisque etiam felis <br /> facilisi
@@ -180,7 +187,7 @@ const App = () => {
             </CardTop>
             <CardBottom>
               <StyledH5>
-                <span>Погрузочно-разгрузочная деятельность </span>
+                <span>Погрузочно-разгрузочная<br /> деятельность </span>
               </StyledH5>
             </CardBottom>
           </Card>

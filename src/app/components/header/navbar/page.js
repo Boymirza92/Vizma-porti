@@ -27,6 +27,7 @@ const Images = styled.img`
 
   @media (max-width: 768px) {
     height: 1rem;
+    margin-left: 3rem;
   }
 `;
 

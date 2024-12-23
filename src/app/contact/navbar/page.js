@@ -13,7 +13,6 @@ const AppWrapper = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px) {
-    padding: 0 1rem; /* Mobil uchun ichki bo'shliq qo'shish */
   }
 `;
 
@@ -69,6 +68,7 @@ const NavbarLi = styled.li`
   }
 
   @media (max-width: 768px) {
+    word-break: break-word;
     margin: 10px 0; /* Mobil qurilmalar uchun bo'shliqni moslashtirish */
   }
 `;
@@ -150,8 +150,8 @@ const ContactWrapper = () => {
         <NavbarUl>
           <NavbarLi>ГЛАВНАЯ ➡</NavbarLi>
           <NavbarLi>КЛИЕНТАМ ➡</NavbarLi>
-          <NavbarLi style={{ width: "30rem" }}>
-            ЗАЯВКА И ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ЗАКЛЮЧЕНИЯ ДОГОВОРОМ ➡
+          <NavbarLi style={{ width: "15rem" }}>
+          ДОКУМЕНТЫ ДЛЯ ДОГОВОРА ➡
           </NavbarLi>
         </NavbarUl>
       </Navbar>

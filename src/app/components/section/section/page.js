@@ -16,6 +16,7 @@ const AppWrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 30px;
+    height: 100%;
   }
 `;
 
@@ -55,6 +56,7 @@ const Section = styled.div`
   width: 50%;
 
   @media (max-width: 768px) {
+    
     position: relative;
     bottom: 0;
     left: 0;
@@ -71,6 +73,9 @@ const Row = styled.div`
 
   @media (max-width: 768px) {
     gap: 15px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
   }
 `;
 
@@ -93,9 +98,11 @@ const Card = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+  
+    width: 50%;
+    
     height: auto;
-    margin-bottom: 15px;
+
   }
 `;
 
@@ -116,6 +123,11 @@ const StyledH5 = styled.h5`
     margin-top: 5px;
     padding: 0;
   }
+    @media (max-width: 768px) {
+    font-size: 12px;
+    padding-top: 10px;
+
+    }
 `;
 
 const CardTop = styled.div`
@@ -136,7 +148,7 @@ const TextSection = styled.div`
   gap: 20px;
 
   @media (max-width: 768px) {
-    margin-top: 30rem;
+    margin-top: 0;
     width: 100%;
     padding: 25px;
   }
@@ -161,6 +173,8 @@ const TextOne = styled.h3`
 
   @media (max-width: 768px) {
     font-size: 20px;
+    margin: 0;
+    padding: 0;
   }
 `;
 
