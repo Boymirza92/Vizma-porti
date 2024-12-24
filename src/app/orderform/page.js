@@ -5,8 +5,7 @@ import Footer from "../components/footer/page";
 
 const InfoWrapper = styled.div`
   background-color: #f6f8f3;
-  width: 100%;
-  height: 100%;
+  font-family: arial, sans-serif;
 `;
 
 const Navbar = styled.div`
@@ -74,22 +73,144 @@ const TextH1 = styled.h1`
   margin-bottom: 2rem;
 `;
 //Formalar
+// const FormWrapper = styled.div`
+//   gap: 1.5rem;
+//   width: 50%;
+//   margin: 0 auto;
+//   padding: 2rem;
+//   border-radius: 8px;
+// `;
+// const Form = styled.form`
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr); /* Ikkita ustunli joylashuv */
+//   gap: 3rem;
+// `;
+
+// const FormRow = styled.div`
+//   display: flex;
+//   flex-direction: column; /* Label va input ustma-ust joylashishi uchun */
+// `;
+
+// const Label = styled.label`
+//   margin-bottom: 5px; /* Label va input orasidagi masofa */
+//   font-weight: bold; /* Qalin matn */
+// `;
+
+// const Input = styled.input`
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   font-size: 14px;
+// `;
+
+// const Select = styled.select`
+//   padding: 10px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   font-size: 14px;
+// `;
+
+// const Option = styled.option`
+//   font-size: 14px;
+// `;
+
+// const ButtonFile = styled.div`
+//   grid-column: span 2; /* Ikkala ustunni egallash uchun */
+//   display: flex;
+//   justify-content: space-between;
+//   gap: 10px;
+//   margin-bottom: 7rem;
+// `;
+
+// // const Button = styled.button`
+// //   padding: 10px 20px;
+// //   background-color: #007bff;
+// //   color: #fff;
+// //   border: none;
+// //   border-radius: 4px;
+// //   cursor: pointer;
+// //   font-size: 14px;
+
+// //   &:hover {
+// //     background-color: #0056b3;
+// //   }
+// // `;
+
+// const FullWidthForm = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: start;
+// `;
+
+// const TextForm = styled.h1`
+//   font-size: 2rem;
+// `;
+
+// const Button = styled.button`
+//   height: 3rem;
+//   padding: 1rem;
+//   margin-top: 3rem;
+//   font-size: 1rem;
+//   background-color: #9b59b6;
+//   color: #fff;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   &:hover {
+//     background-color: #7a4791;
+//   }
+// `;
+
+
+
+// const BottomButton = styled.button`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   margin-top: 3rem;
+//   font-size: 1.5rem;
+//   border: none;
+//   background-color: inherit;
+//   font-weight: bold;
+
+//   &:hover {
+//     color: blue;
+//   }
+// `;
+
 const FormWrapper = styled.div`
   gap: 1.5rem;
-  max-width: 600px;
+  width: 50%;
   margin: 0 auto;
   padding: 2rem;
   border-radius: 8px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    padding: 1rem;
+  }
 `;
+
 const Form = styled.form`
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Ikkita ustunli joylashuv */
-  gap: 20px; /* Ustunlar va qatorlar orasidagi masofa */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 `;
 
 const FormRow = styled.div`
   display: flex;
-  flex-direction: column; /* Label va input ustma-ust joylashishi uchun */
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const Label = styled.label`
@@ -115,41 +236,98 @@ const Option = styled.option`
   font-size: 14px;
 `;
 
+const FullWidthForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+`;
+
+const TextForm = styled.h1`
+  font-size: 2rem;
+`;
+const RadioGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Har bir qator orasidagi masofa */
+`;
+
+const RadioOption = styled.label`
+  display: flex;
+  align-items: center; /* Radio tugma va matnni bir xil chiziqda joylashtirish */
+  gap: 0.5rem; /* Tugma va matn orasidagi masofa */
+  cursor: pointer; /* Ko‘rsatkichni "pointer"ga o‘zgartiradi */
+`;
+
+const RadioInput = styled.input`
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 5px; /* To'rtburchak shakl uchun */
+  background-color: #fff;
+  cursor: pointer;
+
+  &:checked {
+    background: radial-gradient(circle, red, blue);
+
+    border-color: rgb(11, 43, 78);
+  }
+`;
+
 const ButtonFile = styled.div`
-  grid-column: span 2; /* Ikkala ustunni egallash uchun */
+  grid-column: span 2;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  margin-bottom: 7rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
 `;
 
-// const Button = styled.button`
-//   padding: 10px 20px;
-//   background-color: #007bff;
-//   color: #fff;
-//   border: none;
-//   border-radius: 4px;
-//   cursor: pointer;
-//   font-size: 14px;
-
-//   &:hover {
-//     background-color: #0056b3;
-//   }
-// `;
-
-const FullWidthForm = styled.div``;
-
-const TextForm = styled.div``;
-
 const Button = styled.button`
+  height: 3rem;
   padding: 1rem;
+  margin-top: 3rem;
   font-size: 1rem;
   background-color: #9b59b6;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
   &:hover {
     background-color: #7a4791;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 1rem;
+  }
+`;
+
+const BottomButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  border: none;
+  background-color: inherit;
+  font-weight: bold;
+
+  &:hover {
+    color: blue;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 `;
 
@@ -186,10 +364,8 @@ const OrderForm = () => {
             </FormRow>
             <FormRow>
               <Label htmlFor="aname">Пункт назначения перевозки</Label>
-
               <Input type="text" id="aname" name="lname" />
             </FormRow>
-
             <FormRow>
               <Label htmlFor="unit">Груз поступает в порт</Label>
               <Select id="unit" name="unit">
@@ -236,7 +412,9 @@ const OrderForm = () => {
                 </Option>
                 <Option value="dangerousGoods">Перевозка опасных грузов</Option>
                 <Option value="cashOnDelivery">Наложенный платеж</Option>
-              </Select>{" "}
+              </Select>
+            </FormRow>
+            <FormRow>
               <Label htmlFor="cargoArrivalPeriod">
                 Период поступления груза к перевалке*
               </Label>
@@ -250,7 +428,9 @@ const OrderForm = () => {
                 <Option value="startOfWeek">День начала недели</Option>
                 <Option value="endOfMonth">Конец месяца</Option>
                 <Option value="expectedDate">Ожидаемая дата</Option>
-              </Select>{" "}
+              </Select>
+            </FormRow>
+            <FormRow>
               <Label htmlFor="unit">Груз отправляется из порта</Label>
               <Select name="cargoTransportType" id="cargoTransportType">
                 <Option value="sea">Морской транспорт</Option>
@@ -258,50 +438,86 @@ const OrderForm = () => {
                 <Option value="road">Автомобильный транспорт</Option>
                 <Option value="air">Авиационный транспорт</Option>
               </Select>
-              <Label htmlFor="cname">Размер судовой партии</Label>
-              <Input type="text" id="cname" name="lname" />
             </FormRow>
             <FormRow>
-              <Label htmlFor="dname">Дополнительная информация о грузо:</Label>
-              <Input type="text" id="dname" name="lname" />
+              <Label htmlFor="cname">Размер судовой партии</Label>
+              <Input type="text" id="cname" name="lname" />
             </FormRow>
             <FormRow>
               <Label htmlFor="oposnost">Опостность груза (класс)</Label>
               <Input type="text" id="oposnost" name="lname" />
             </FormRow>
+
             <ButtonFile>
+              <FormRow>
+                <Label htmlFor="dname">
+                  Дополнительная информация о грузо:
+                </Label>
+                <Input
+                  type="text"
+                  id="dname"
+                  name="lname"
+                  style={{ height: "5rem", width: "21rem" }}
+                />
+              </FormRow>
               <Button type="submit">Выберите файл</Button>
-              <Button type="submit">Файд не выбран</Button>
+              <Button type="submit">Файл не выбран</Button>
             </ButtonFile>
           </Form>
-          {/* </FormRight> */}
           <FullWidthForm>
             <TextForm>Просим сообщит:</TextForm>
-            <Input type="radio" name="ish" value="ish" />
-            <Label htmlFor="ish">Ставку ппр</Label>
-            <Input type="radio" name="ish" value="ish" />
-            <Label htmlFor="ish">
-              Ставку срок технологического накоплениия груза
-            </Label>
-            <Input type="radio" name="ish" value="ish" />
-            <Label htmlFor="ish">
-              Ставку хранения груза сверх срока тенологического накопления
-            </Label>
-            <Input type="radio" name="ish" value="ish" />
-            <Label htmlFor="ish">
-              Возможность приёма и перевалки груза в указанные сроки
-            </Label>
-            <TextForm>Информация дляоабротной связи:</TextForm>
-            <Label htmlFor="name">Имя, фамилия</Label>
-            <Input type="text" id="name" name="name" />
-            <Label htmlFor="name">Номер телефога</Label>
-            <Input type="number" id="name" name="name" />
-            <Label htmlFor="name">Название компонии</Label>
-            <Input type="text" id="name" name="name" />
-            <Label htmlFor="name">Адрес эл. почты</Label>
-            <Input type="text" id="name" name="name" />
+            <RadioGroup>
+              <RadioOption>
+                <RadioInput type="radio" name="ish" value="ish" />
+                <Label htmlFor="ish">Ставку ппр</Label>
+              </RadioOption>
+              <RadioOption>
+                <RadioInput type="radio" name="ish" value="ish" />
+                <Label htmlFor="ish">
+                  Ставку срок технологического накоплениия груза
+                </Label>
+              </RadioOption>
+              <RadioOption>
+                <RadioInput type="radio" name="ish" value="ish" />
+                <Label htmlFor="ish">
+                  Ставку хранения груза сверх срока тенологического накопления
+                </Label>
+              </RadioOption>
+              <RadioOption>
+                <RadioInput type="radio" name="ish" value="ish" />
+                <Label htmlFor="ish">
+                  Возможность приёма и перевалки груза в указанные сроки
+                </Label>
+              </RadioOption>
+            </RadioGroup>
+            <TextForm style={{ margin: "4rem 0 2rem  0rem" }}>
+              Информация дляоабротной связи:
+            </TextForm>
+            <Form>
+              <FormRow>
+                <Label htmlFor="name">Имя, фамилия</Label>
+                <Input
+                  style={{ width: "20rem" }}
+                  type="text"
+                  id="name"
+                  name="name"
+                />
+              </FormRow>
+              <FormRow>
+                <Label htmlFor="name">Номер телефона</Label>
+                <Input type="number" id="name" name="name" />
+              </FormRow>
+              <FormRow>
+                <Label htmlFor="name">Название компонии</Label>
+                <Input type="text" id="name" name="name" />
+              </FormRow>
+              <FormRow>
+                <Label htmlFor="name">Адрес эл. почты</Label>
+                <Input type="text" id="name" name="name" />
+              </FormRow>
+            </Form>
           </FullWidthForm>
-          <Button type="submit">Отправить</Button>
+          <BottomButton type="submit">Отправить ☑</BottomButton>
         </FormWrapper>
       </Section>
       <Footer />
