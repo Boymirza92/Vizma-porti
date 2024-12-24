@@ -61,7 +61,6 @@ const NavItem = styled.li`
   text-align: center;
   margin: 0 1rem;
   padding: 0.5rem;
-  font-size: 1rem;
   font-weight: bold;
   color: #c39bd3;
 
@@ -76,8 +75,7 @@ const NavItem = styled.li`
   a {
     text-decoration: none;
     color: inherit;
-    font-size: 0.7rem;
-    padding: 1rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 768px) {

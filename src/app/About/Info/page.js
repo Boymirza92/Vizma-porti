@@ -15,7 +15,7 @@ const AppWrapper = styled.div`
   flex-wrap: wrap; /* Kichik ekranlar uchun moslashuv */
   width: 100%;
   max-width: 1450px;
-  padding-left: 45px;
+  padding-left: 0.7rem;
   padding-bottom: 70px;
   margin: 0 auto; /* Kontentni markazlash uchun */
 `;
@@ -28,11 +28,20 @@ const AppTitle = styled.div`
   padding-left: 20px;
   max-width: 1400px;
   margin-bottom: 20px;
+
+  @media only screen and (max-width:768px) {
+  justify-content: space-between;
+  }
+
 `;
 
 const News = styled.h1`
-  font-size: 35px;
+  font-size: 2rem;
   margin-top: 35px;
+
+  @media only screen and (max-width:768px) {
+  font-size: 1.5rem;
+  }
 `;
 
 const NewParagrap = styled.h5`
@@ -40,6 +49,11 @@ const NewParagrap = styled.h5`
   cursor: pointer;
   &:hover {
     color: green;
+  }
+    @media only screen and (max-width:768px) {
+  font-size: 0.6rem;
+  margin-top: 2.5rem;
+  margin-right: 2rem
   }
 `;
 
@@ -64,6 +78,7 @@ const CardImg = styled.div`
 
   @media only screen and (max-width: 480px) {
     flex: 1 1 100%; /* Bitta ustunda joylashish uchun */
+
   }
 `;
 

@@ -13,7 +13,7 @@ const AppWrapper = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  height: 65rem;
+  height: 65rem ;
   background-color: #e0ffff;
 
   @medi (max-width: 768px) {
@@ -100,7 +100,7 @@ const Card = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 20px;
-    padding: 0 0 2rem;;
+    padding: 1rem 2rem 2rem 1rem;
   }
 `;
 
@@ -114,7 +114,8 @@ const Title = styled.h5`
   @media (max-width: 768px) {
     font-size: 14px;
     margin: 5px;
-    padding-bottom: 20px;
+    // padding: 20px 20px 10px 10px;
+    ;
   }
 `;
 
