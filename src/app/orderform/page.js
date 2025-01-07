@@ -71,113 +71,11 @@ const TextH1 = styled.h1`
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
-//Formalar
-// const FormWrapper = styled.div`
-//   gap: 1.5rem;
-//   width: 50%;
-//   margin: 0 auto;
-//   padding: 2rem;
-//   border-radius: 8px;
-// `;
-// const Form = styled.form`
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr); /* Ikkita ustunli joylashuv */
-//   gap: 3rem;
-// `;
-
-// const FormRow = styled.div`
-//   display: flex;
-//   flex-direction: column; /* Label va input ustma-ust joylashishi uchun */
-// `;
-
-// const Label = styled.label`
-//   margin-bottom: 5px; /* Label va input orasidagi masofa */
-//   font-weight: bold; /* Qalin matn */
-// `;
-
-// const Input = styled.input`
-//   padding: 10px;
-//   border: 1px solid #ccc;
-//   border-radius: 4px;
-//   font-size: 14px;
-// `;
-
-// const Select = styled.select`
-//   padding: 10px;
-//   border: 1px solid #ccc;
-//   border-radius: 4px;
-//   font-size: 14px;
-// `;
-
-// const Option = styled.option`
-//   font-size: 14px;
-// `;
-
-// const ButtonFile = styled.div`
-//   grid-column: span 2; /* Ikkala ustunni egallash uchun */
-//   display: flex;
-//   justify-content: space-between;
-//   gap: 10px;
-//   margin-bottom: 7rem;
-// `;
-
-// // const Button = styled.button`
-// //   padding: 10px 20px;
-// //   background-color: #007bff;
-// //   color: #fff;
-// //   border: none;
-// //   border-radius: 4px;
-// //   cursor: pointer;
-// //   font-size: 14px;
-
-// //   &:hover {
-// //     background-color: #0056b3;
-// //   }
-// // `;
-
-// const FullWidthForm = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: start;
-// `;
-
-// const TextForm = styled.h1`
-//   font-size: 2rem;
-// `;
-
-// const Button = styled.button`
-//   height: 3rem;
-//   padding: 1rem;
-//   margin-top: 3rem;
-//   font-size: 1rem;
-//   background-color: #9b59b6;
-//   color: #fff;
-//   border: none;
-//   border-radius: 4px;
-//   cursor: pointer;
-//   &:hover {
-//     background-color: #7a4791;
-//   }
-// `;
-
-
-
-// const BottomButton = styled.button`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 100%;
-//   margin-top: 3rem;
-//   font-size: 1.5rem;
-//   border: none;
-//   background-color: inherit;
-//   font-weight: bold;
-
-//   &:hover {
-//     color: blue;
-//   }
-// `;
 
 const FormWrapper = styled.div`
   gap: 1.5rem;
@@ -187,8 +85,10 @@ const FormWrapper = styled.div`
   border-radius: 8px;
 
   @media (max-width: 768px) {
-    width: 90%;
-    padding: 1rem;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
   }
 `;
 
@@ -200,6 +100,9 @@ const Form = styled.form`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
   }
 `;
 
@@ -208,14 +111,20 @@ const FormRow = styled.div`
   flex-direction: column;
 
   @media (max-width: 768px) {
-    flex-direction: column;
     width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
   }
 `;
 
 const Label = styled.label`
-  margin-bottom: 5px; /* Label va input orasidagi masofa */
-  font-weight: bold; /* Qalin matn */
+  margin-bottom: 5px;
+  font-weight: bold;
+
+  @media (max-width: 768) {
+    font-size: 12px;
+  }
 `;
 
 const Input = styled.input`
@@ -223,6 +132,13 @@ const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+  height: 2.5rem;
+    width: 80%; /* Ekran kichrayganda to'liq kenglik */
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const Select = styled.select`
@@ -230,6 +146,11 @@ const Select = styled.select`
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    width: 80%; /* Ekran kichrayganda to'liq kenglik */
+    height: 2.5rem;
+  }
 `;
 
 const Option = styled.option`
@@ -244,18 +165,24 @@ const FullWidthForm = styled.div`
 
 const TextForm = styled.h1`
   font-size: 2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem; /* Kichik ekranlarda font o'lchamini kichraytirish */
+  }
 `;
+
 const RadioGroup = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Har bir qator orasidagi masofa */
+  gap: 1rem;
 `;
 
 const RadioOption = styled.label`
   display: flex;
-  align-items: center; /* Radio tugma va matnni bir xil chiziqda joylashtirish */
-  gap: 0.5rem; /* Tugma va matn orasidagi masofa */
-  cursor: pointer; /* Ko‘rsatkichni "pointer"ga o‘zgartiradi */
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
 `;
 
 const RadioInput = styled.input`
@@ -263,13 +190,12 @@ const RadioInput = styled.input`
   width: 20px;
   height: 20px;
   border: 2px solid #000;
-  border-radius: 5px; /* To'rtburchak shakl uchun */
+  border-radius: 5px;
   background-color: #fff;
   cursor: pointer;
 
   &:checked {
     background: radial-gradient(circle, red, blue);
-
     border-color: rgb(11, 43, 78);
   }
 `;
@@ -290,10 +216,11 @@ const ButtonFile = styled.div`
 `;
 
 const Button = styled.button`
-  height: 3rem;
+  align-items: center;
+  height: 2.3rem;
   padding: 1rem;
-  margin-top: 3rem;
-  font-size: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
   background-color: #9b59b6;
   color: #fff;
   border: none;
@@ -305,7 +232,7 @@ const Button = styled.button`
   }
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 100%; /* Ekran kichrayganda butonni to'liq kenglikda qilish */
     margin-top: 1rem;
   }
 `;
@@ -339,15 +266,14 @@ const OrderForm = () => {
         <NavbarUl>
           <NavbarLi>ГЛАВНАЯ ➡</NavbarLi>
           <NavbarLi>КЛИЕНТАМ ➡</NavbarLi>
-          <NavbarLi style={{ width: "30rem" }}>
-            ЗАЯВКА И ПЕРЕЧЕНЬ ДОКУМЕНТОВ ДЛЯ ЗАКЛЮЧЕНИЯ ДОГОВОРОМ ➡
+          <NavbarLi style={{ width: "15rem" }}>
+            ДОКУМЕНТЫДЛЯ ДЛЯ ДОГОВОРА ➡
           </NavbarLi>
         </NavbarUl>
       </Navbar>
       <Section>
         <TextH1>Запрос ставки и условий погрузочно-разгрузочных работ</TextH1>
         <FormWrapper>
-          {/* <FormLeft> */}
           <Form>
             <FormRow>
               <Label htmlFor="fname">Наименовие груза *</Label>
@@ -419,6 +345,7 @@ const OrderForm = () => {
                 Период поступления груза к перевалке*
               </Label>
               <Select name="cargoArrivalPeriod" id="cargoArrivalPeriod">
+                <Option value="" disabled selected></Option>
                 <Option value="today">Сегодня</Option>
                 <Option value="tomorrow">Завтра</Option>
                 <Option value="in3days">Через 3 дня</Option>
@@ -457,7 +384,7 @@ const OrderForm = () => {
                   type="text"
                   id="dname"
                   name="lname"
-                  style={{ height: "5rem", width: "21rem" }}
+                  // style={{ height: "5rem", width: "21rem" }}
                 />
               </FormRow>
               <Button type="submit">Выберите файл</Button>
@@ -465,7 +392,7 @@ const OrderForm = () => {
             </ButtonFile>
           </Form>
           <FullWidthForm>
-            <TextForm>Просим сообщит:</TextForm>
+            <TextForm>Просим сообщит</TextForm>
             <RadioGroup>
               <RadioOption>
                 <RadioInput type="radio" name="ish" value="ish" />
